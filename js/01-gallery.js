@@ -7,9 +7,11 @@ gallery.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.nodeName === "IMG") {
     const instance = basicLightbox.create(`
-    <img src="${event.target.getAttribute("data-source")}" width="800" height="600">`);
+    <img src="${event.target.getAttribute(
+      "data-source"
+    )}" width="800" height="600">`);
     instance.show();
-  } 
+  }
 });
 
 function createGallery(images) {
@@ -27,7 +29,6 @@ function createGallery(images) {
     })
     .join("");
 }
-
 
 gallery.insertAdjacentHTML("beforeend", createGallery(galleryItems));
 console.log(galleryItems);
