@@ -1,6 +1,4 @@
 import { galleryItems } from "./gallery-items.js";
-import * as basicLightbox from "../node_modules/basiclightbox/src/scripts/main.js";
-
 const gallery = document.querySelector(`.gallery`);
 
 gallery.addEventListener("click", (event) => {
